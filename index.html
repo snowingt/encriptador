@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+  
+        <div
+          class="contenedor grid grid-cols-1 sm:grid-cols-6 gap-4 sm:grid-rows-6 grid-rows-4 h-screen bg-slate-300"
+        >
+        <div class="sm:col-span-2 sm:row-span-1 row-span-1 col-span-1 nav"><span>a</span></div>
+        <div class="sm:col-start-5 sm:col-end-7 sm:row-span-6 col-span-1 mensagge grid ">
+            <div class="imagge ">
+                <img src="./Muñeco.png" alt="Logo" border="0" class="" >
+                <div class="text--cod ">
+                    <h4>Ningun mensaje fue encontrado</h4>
+                    <span >Ingresa el texto que desees encriptar o desencirptar</span>
+                </div>
+                
+            </div>
+            <h3 class="span--cod"></h3>
+        
+
+        </div>
+          <div class="sm:col-start-2 sm:col-end-5 sm:row-span-5  grid grid-rows-2 row-start-2 row-end-4  ">
+              <div class="camp--tex ">
+                  <textarea
+                  name=""
+                  id="code--text"
+                  placeholder="introduce el texto aqui"
+                 
+                  ></textarea>
+                </div>
+                <div class="grid grid-cols-1 grid-rows-2  sm:grid-cols-2 justify-end items-end  ">
+                    
+                    
+                    <button class="btn--cod btn--g    ">codificar</button>
+                    <button class="btn--dec btn--g  ">decodificar</button>
+                </div>
+            </div>
+        </div>
+
+    
+    <style>
+     .contenedor{
+        background-color: #f3f5fc;
+     }
+      .nav {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        font-family: "Courier New", Courier, monospace;
+      }
+      .nav span {
+        font-weight: bold;
+        
+        color: #0a3871;
+        position: absolute;
+        padding-left: 80px;
+        width: 120px;
+        height: 48px;
+
+        font-size: 50px;
+      }
+      .mensagge {
+        
+        background-color: #feffff;
+        margin-top: 30px;
+        margin-left: 100px;
+        width: 55%;
+        height: 88%;
+       
+        justify-content: center;
+        align-items: center;
+       
+        border-radius: 15px;
+       place-content: center;
+         place-items: center;
+      }
+        .mensagge img {
+           padding-left: 20px;
+            display: block;
+            
+           
+          
+        width: 80%;
+        height: 80%;
+       
+
+        }
+        .mensagge h4{
+            font-size: 32px;
+        font-family: "Courier New", Courier, monospace;
+        
+        text-align: center;
+           
+        }
+        .mensagge span{
+            display: grid;
+            text-align: center;
+        }
+        .span--cod{
+            width:150PX;
+            word-wrap: break-word;
+           text-align: center;
+        }
+
+        .text--cod{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            font-size: 15px;
+            font-family: "Courier New", Courier, monospace;
+            color: #0a3871;
+        }
+        .text--cod h4{
+            font-weight: bold;
+            font-size: 20px;
+            font-family: "Courier New", Courier, monospace;
+            color: #0a3871;
+        }
+        
+     
+   
+     
+      textarea {
+        
+        width: 100%;
+        height: 100%;
+        background-color: #f3f5fc;
+        border: none;
+        outline: none;
+        resize: none;
+        font-size: 20px;
+        font-family: "Courier New", Courier, monospace;
+      }
+      
+      .btn--cod {
+     
+        background-color: #0a3871;
+        color: #feffff;
+        border: none;
+        outline: none;
+        font-size: 20px;
+        font-family: "Courier New", Courier, monospace;
+        cursor: pointer;
+      }
+      .btn--dec {
+      
+        background-color: #f3f5fc;
+        color: #0a3871;
+        border: none;
+        outline: none;
+        font-size: 20px;
+        font-family: "Courier New", Courier, monospace;
+        cursor: pointer;
+      }
+      .btn--coppy {
+       margin-top: 52px;
+        cursor: pointer;
+      }
+      .btn--cod:hover {
+        background-color: #e5e7f0;
+        color: #0a3871;
+      }
+      .btn--dec:hover {
+        background-color: #e5e7f0;
+      }
+      .btn--g {
+        width: 250px;
+        height: 50px;
+        border-radius: 15px;
+        
+        border: #0a3871 2px solid;
+      }
+      .active{
+         display: none;
+      }
+      @media screen and (max-width: 768px) {
+        .mensagge {
+          margin-left: 0px;
+          width: 100%;
+          height: 100%;
+        }
+        .mensagge img {
+         display: none;
+        }
+        .mensagge h4 {
+          font-size: 28px;
+        }
+        .mensagge span {
+          font-size: 15px;
+        }
+        .text--cod {
+          font-size: 10px;
+        }
+        .text--cod h4 {
+          font-size: 15px;
+        }
+        .btn--g {
+          width: 100%;
+          height: 50px;
+          border-radius: 15px;
+          border: #0a3871 2px solid;
+        }
+        .btn--cod {
+          font-size: 15px;
+        }
+        .btn--dec {
+          font-size: 15px;
+        }
+      }
+        
+      
+    </style>
+    <script src="./script.js"></script>
+  </body>
+</html>
